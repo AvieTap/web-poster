@@ -1,0 +1,235 @@
+:root {
+    --pink: rgb(182, 44, 116);
+    --lpink: rgb(208, 125, 168);
+    --magenta: rgb(186, 51, 163);
+    --lmagenta: rgb(228, 150, 215);
+    --purple: rgb(121, 38, 147);
+    --lpurple: rgb(207, 152, 224);
+    --indigo: rgb(102, 51, 185);
+    --lindigo: rgb(168, 136, 219);
+
+    /* So I don't need to manually change everything that uses the non-Gill Sans font */
+    --altFont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Basic selectors (hold default vals) */
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+}
+
+h3 {
+    margin: 25px;
+}
+
+h4, a {
+    margin: 10px 25px;
+}
+
+p, img {
+    margin: 0px 25px;
+}
+
+h1 {
+    font-size: 55px;
+    z-index: 1;
+}
+
+h2, i {
+    font-size: 30px;
+    font-family: var(--altFont);
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h3.pink, h3.purple {
+    text-align: left;
+}
+
+h3.magenta, h3.indigo {
+    text-align: right;
+}
+
+h4, a {
+    font-size: 23px;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.date, .time, .location, p {
+    font-size: 14px;
+    font-family: var(--altFont);
+}
+
+.event, .corner {
+    position: absolute;
+    width: 45%;
+    height: 33%;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.corner {
+    padding-top: 25px;
+    opacity: 0.25;
+}
+
+/* For vertical text orientation in the corners */
+.v {
+    padding-left: 85%;
+    writing-mode: vertical-lr;
+    font-size: 11px;
+}
+
+#titles {
+    position: absolute;
+    line-height: 20px;
+    top: 36.5%;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+}
+
+/* handle1 = drag resize, handle2 = toggle scroll */
+.handle, .handle2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.handle {
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+}
+
+.handle2 {
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+/* Info boxes + corners (only visible if you drag away/shrink the box) */
+#maria-carolina-cambre, #corner-m {
+    background-color: rgb(58, 8, 34);
+    top: 0;
+    left: 0;
+}
+
+#maria-carolina-cambre {
+    border: 5px double var(--pink);
+    text-align: right;
+}
+
+#corner-m {
+    border: 6px groove var(--pink);
+}
+
+.maria {
+    background-color: var(--lpink);
+}
+
+.pink {
+    color: var(--lpink);
+}
+
+.pink2 {
+    color: var(--pink);
+}
+
+#isabel-machado, #corner-i {
+    background-color: rgb(63, 10, 54);
+    top: 0;
+    right: 0;
+}
+
+#isabel-machado {
+    border: 5px double var(--magenta);
+    text-align: left;
+}
+
+#corner-i {
+    border: 6px ridge var(--magenta);
+}
+
+.isabel {
+    background-color: var(--lmagenta);
+}
+
+.magenta {
+    color: var(--lmagenta);
+}
+
+.magenta2 {
+    color: var(--magenta);
+}
+
+#daniel-wildberger, #corner-d {
+    background-color: rgb(37, 5, 46);
+    bottom: 0;
+    left: 0;
+}
+
+#daniel-wildberger {
+    border: 5px double var(--purple);
+    text-align: right;
+}
+
+#corner-d {
+    border: 3px inset var(--purple);
+}
+
+.daniel {
+    background-color: var(--lpurple);
+}
+
+.purple {
+    color: var(--lpurple);
+}
+
+.purple2 {
+    color: var(--purple);
+}
+
+#shima-rezaei-rashnoodi, #corner-s {
+    background-color: rgb(23, 8, 47);
+    bottom: 0;
+    right: 0;
+}
+
+#shima-rezaei-rashnoodi {
+    border: 5px double var(--indigo);
+    text-align: left;
+}
+
+#corner-s {
+    border: 3px outset var(--indigo);
+}
+
+.shima {
+    background-color: var(--lindigo);
+}
+
+.indigo {
+    color: var(--lindigo);
+}
+
+.indigo2 {
+    color: var(--indigo);
+}
